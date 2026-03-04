@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceBreaker - Manage Questions</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="manage-page">
+  <div class="manage-container">
+    <header class="manage-header">
+      <h1>Manage Questions</h1>
+      <a href="index.html" class="back-link">← Back to Card</a>
+    </header>
+
+    <!-- Add new question -->
+    <section class="add-question-section">
+      <h2>Add New Question</h2>
+      <div class="input-group">
+        <input
+          type="text"
+          id="new-question-input"
+          class="question-input"
+          placeholder="Enter your question..."
+          maxlength="200"
+        >
+        <button id="add-question-btn" class="btn-primary">Add Question</button>
+      </div>
+      <p id="input-error" class="error-message"></p>
+    </section>
+
+    <!-- Questions list -->
+    <section class="questions-list-section">
+      <h2>Your Questions (<span id="question-count">0</span>)</h2>
+      <div id="questions-list" class="questions-list">
+        <!-- Questions will be dynamically inserted here -->
+      </div>
+      <p id="empty-state" class="empty-state">No questions yet. Add your first question above!</p>
+    </section>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
