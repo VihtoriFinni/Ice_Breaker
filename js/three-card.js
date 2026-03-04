@@ -103,8 +103,20 @@ class ThreeCard {
    * Create front texture (design/pattern)
    */
   createFrontTexture() {
-    // Use custom image from assets
-    return new THREE.TextureLoader().load('../assets/card-faces/card_Front.png');
+    // Try to load custom image, with fallback to procedural texture
+    const loader = new THREE.TextureLoader();
+
+    // Try loading from assets
+    const texture = loader.load(
+      'assets/card-faces/card-front.png',
+      undefined,  // onLoad
+      undefined,  // onProgress
+      () => {      // onError - fallback to procedural texture
+        console.warn('Could not load card-front.png, using procedural texture');
+      }
+    );
+
+    return texture;
   }
 
   /**

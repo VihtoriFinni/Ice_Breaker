@@ -45,7 +45,7 @@ background: var(--bg-gradient); /* Purple gradient */
 ### Location: `assets/card-faces/`
 
 ### Card Front (Design Face)
-- **Filename:** `front.png` or `front.jpg`
+- **Filename:** `card-front.png` (lowercase, recommended)
 - **Size:** 512x730 pixels
 - **Format:** PNG with transparency recommended
 - **Purpose:** Design face without question text
@@ -97,8 +97,8 @@ assets/card-faces/front.png  →  Drop your image here
 
 Then in `js/three-card.js`:
 ```javascript
-// Uncomment in createFrontTexture():
-return new THREE.TextureLoader().load('../assets/card-faces/front.png');
+// Used in createFrontTexture():
+return new THREE.TextureLoader().load('../assets/card-faces/card_Front.png');
 ```
 
 ---

@@ -9,12 +9,13 @@ A minimalist web application with a single 3D card that displays reflection ques
 
 ## Features
 
-- **Single 3D Card** - Smooth flip animation with glassmorphism design
-- **Mouse Tilt Effect** - Card responds to mouse movement
+- **Single 3D Card** - Smooth flip animation with Three.js
+- **Custom Card Design** - Uses custom image on front, solid color on back
+- **Mouse Tilt Effect** - Card tilts up/down following mouse movement
 - **Question Management** - Add, view, and delete custom questions
 - **Local Storage** - All questions persist in browser storage
 - **Responsive Design** - Works on desktop, tablet, and mobile
-- **Zero Dependencies** - No frameworks, just vanilla JavaScript
+- **Wood Background** - Beautiful wood texture background image
 
 ---
 
@@ -221,7 +222,7 @@ graph LR
 | CSS3 | Styling & Animations | - |
 | JavaScript (ES6+) | Logic | Modules |
 | localStorage | Data Persistence | Web API |
-| Three.js | 3D graphics (loaded, CSS used instead) | r128 |
+| Three.js | 3D card rendering | r128 (CDN) |
 
 ---
 

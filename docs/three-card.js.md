@@ -50,23 +50,22 @@ Create the 3D card mesh.
 - Sides: Solid colors
 
 #### `createFrontTexture()`
-Generate canvas texture for front face (design/pattern).
+Load or generate texture for front face (design/pattern).
 
-**Visual Elements:**
-- Glassmorphism gradient background
-- Conic gradient pattern (rotating lines)
-- Large "?" symbol in center
-- Border and shadow effects
+**Current Implementation:**
+- Loads custom image: `../assets/card-faces/card_Front.png`
+- To use procedural canvas instead, see comments in code
 
-**Returns:** `THREE.CanvasTexture`
+**Returns:** `THREE.Texture` (from image loader)
 
 #### `createBackTexture()`
 Generate canvas texture for back face (question side).
 
 **Visual Elements:**
-- Glassmorphism gradient
-- Border
-- Clean background for text overlay
+- Solid color background: `#541212` (dark red/brown)
+- White border (opacity 0.4)
+- Text shadow for readability
+- Word-wrapped question text
 
 **Returns:** `THREE.CanvasTexture`
 
@@ -104,8 +103,8 @@ Handle mouse movement - calculate tilt toward cursor.
 
 **Tilt Formula:**
 ```javascript
-targetRotationX = mouseY * maxTilt;  // Tilt up/down
-targetRotationZ = -mouseX * maxTilt; // Tilt left/right
+targetRotationX = mouseY * maxTilt;  // Tilt up/down only
+targetRotationZ = 0;                  // No left/right tilt
 ```
 
 #### `onClick(event)`

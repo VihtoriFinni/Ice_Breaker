@@ -36,10 +36,17 @@ body { ... }
 
 | Variable | Default Value | Purpose |
 |----------|---------------|---------|
-| `--bg-gradient` | `#667eea → #764ba2` | Background gradient |
+| `--bg-gradient` | `#667eea → #764ba2` | Fallback gradient |
 | `--glass-bg` | `rgba(255,255,255,0.1)` | Glass background |
 | `--glass-border` | `rgba(255,255,255,0.2)` | Glass border |
 | `--glass-shadow` | `0 8px 32px rgba(0,0,0,0.1)` | Drop shadow |
+
+**Note:** Currently using wood background image instead of gradient:
+```css
+body {
+  background: url('../assets/backgrounds/wood-background.jpg') center/cover no-repeat fixed;
+}
+```
 
 ## Key Elements
 
