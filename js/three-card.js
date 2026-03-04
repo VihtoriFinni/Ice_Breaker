@@ -108,7 +108,7 @@ class ThreeCard {
 
     // Try loading from assets
     const texture = loader.load(
-      'assets/card-faces/card-front.png',
+      'assets/card-faces/card_Front.png',
       undefined,  // onLoad
       undefined,  // onProgress
       () => {      // onError - fallback to procedural texture
