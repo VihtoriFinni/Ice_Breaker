@@ -268,4 +268,4 @@ MIT License - feel free to use this project for any purpose.
 
 ## Credits
 
-Created with ❤️ using vanilla JavaScript and CSS.
+Created with using vanilla JavaScript and CSS.
